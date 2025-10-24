@@ -1,6 +1,15 @@
+View\PanelTablero.class
 View\GUIInstrucciones.class
 View\GUIJuego.class
-View\GUIPrincipal.class
+View\GUIPrincipal$2.class
+View\PanelControl$1.class
+View\GUIPrincipal$3.class
+View\PanelControl.class
 View\GUICreditos.class
+View\GUIHistoria$1.class
 Main\ParchisDemo.class
+View\GUIHistoria.class
+View\GUIPrincipal.class
+View\GUIPrincipal$4.class
+View\PanelTablero$1.class
 View\GUIPrincipal$1.class

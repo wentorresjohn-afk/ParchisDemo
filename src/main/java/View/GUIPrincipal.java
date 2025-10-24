@@ -56,6 +56,11 @@ public class GUIPrincipal extends javax.swing.JFrame {
         btnHistoria.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnHistoria.setForeground(new java.awt.Color(255, 255, 255));
         btnHistoria.setText("Historia");
+        btnHistoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistoriaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnHistoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, -1));
 
         btnInstrucciones.setBackground(new java.awt.Color(0, 51, 102));
@@ -73,22 +78,52 @@ public class GUIPrincipal extends javax.swing.JFrame {
         btnCreditos.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnCreditos.setForeground(new java.awt.Color(255, 255, 255));
         btnCreditos.setText("Créditos");
+        btnCreditos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreditosActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCreditos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
 
         btnJugar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        btnJugar.setIcon(new javax.swing.ImageIcon("C:\\Users\\jhonw\\OneDrive\\Documentos\\ITM\\Fundamentos de programación\\Proyecto\\ParchisDemo\\src\\main\\Resources\\boton.png")); // NOI18N
+        btnJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton.png"))); // NOI18N
         btnJugar.setContentAreaFilled(false);
+        btnJugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJugarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 230, 90));
 
-        imgFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\jhonw\\OneDrive\\Documentos\\ITM\\Fundamentos de programación\\Proyecto\\ParchisDemo\\src\\main\\Resources\\imgInicio_1.png")); // NOI18N
+        imgFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/imgInicio_1.png"))); // NOI18N
         getContentPane().add(imgFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInstruccionesActionPerformed
-        // TODO add your handling code here:
+    GUIInstrucciones instru = new GUIInstrucciones();
+    instru.setVisible(true);
+    instru.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnInstruccionesActionPerformed
+
+    private void btnCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditosActionPerformed
+    GUICreditos credi = new GUICreditos();
+    credi.setVisible(true);
+    credi.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnCreditosActionPerformed
+
+    private void btnHistoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoriaActionPerformed
+    GUIHistoria histo = new GUIHistoria();
+    histo.setVisible(true);
+    histo.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnHistoriaActionPerformed
+
+    private void btnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarActionPerformed
+    GUIJuego juego = new GUIJuego();
+    juego.setVisible(true);
+    juego.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnJugarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
