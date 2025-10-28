@@ -58,7 +58,7 @@ public class PanelTablero extends javax.swing.JPanel
         imgFichaRoja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FichaRoja.png"))); // NOI18N
         add(imgFichaRoja, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 20, 40));
 
-        imgTablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tablerografico.png"))); // NOI18N
+        imgTablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Diseño sin título (2).png"))); // NOI18N
         add(imgTablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 

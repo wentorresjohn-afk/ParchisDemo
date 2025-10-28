@@ -44,13 +44,13 @@ public class GUIPrincipal extends javax.swing.JFrame {
         lblSelección.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         lblSelección.setForeground(new java.awt.Color(255, 255, 255));
         lblSelección.setText("Selección de color");
-        getContentPane().add(lblSelección, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 210, -1));
+        getContentPane().add(lblSelección, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 210, -1));
 
         comboColor.setBackground(new java.awt.Color(0, 51, 102));
         comboColor.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         comboColor.setForeground(new java.awt.Color(255, 255, 255));
-        comboColor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Azul", "Verde", "Rojo", "Amarillo" }));
-        getContentPane().add(comboColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, -1));
+        comboColor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Amarillo", "Azul", "Verde" }));
+        getContentPane().add(comboColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
 
         btnHistoria.setBackground(new java.awt.Color(0, 51, 102));
         btnHistoria.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
@@ -93,7 +93,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
                 btnJugarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 230, 90));
+        getContentPane().add(btnJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 230, 90));
 
         imgFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/imgInicio_1.png"))); // NOI18N
         getContentPane().add(imgFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
