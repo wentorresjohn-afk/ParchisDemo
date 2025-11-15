@@ -7,6 +7,7 @@ package View;
 import java.awt.Point;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JLabel;
 /**
  *
  * @author jhonw
@@ -21,17 +22,22 @@ public class PanelTablero extends javax.swing.JPanel
     public PanelTablero() 
     {
         initComponents();
-        this.addMouseListener(new MouseAdapter()
-        {
-            @Override
-            public void mousePressed(MouseEvent e)
-                {
-                    Point p = e.getPoint();
-                    moverFicha(p);
-                }
-            
-        });
+//        this.addMouseListener(new MouseAdapter()
+//        {
+//            @Override
+//            public void mousePressed(MouseEvent e)
+//            {
+//                Point p = e.getPoint();
+//                moverFicha(p);
+//            }
+//        }
+//        );
     }// fin del constructor
+
+    public JLabel getImgFichaRoja() {
+        return imgFichaRoja;
+    }
+    
     
     public void moverFicha(Point p)
     {
@@ -50,21 +56,68 @@ public class PanelTablero extends javax.swing.JPanel
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        imgFichaAzul = new javax.swing.JLabel();
+        imgFichaVerde = new javax.swing.JLabel();
+        imgFichaAmarillo = new javax.swing.JLabel();
         imgFichaRoja = new javax.swing.JLabel();
         imgTablero = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        imgFichaAzul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FichaAzul.png"))); // NOI18N
+        add(imgFichaAzul, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, -1, -1));
+
+        imgFichaVerde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FichaVerde.png"))); // NOI18N
+        add(imgFichaVerde, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
+
+        imgFichaAmarillo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FichaAmarilla.png"))); // NOI18N
+        add(imgFichaAmarillo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
+
         imgFichaRoja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FichaRoja.png"))); // NOI18N
-        add(imgFichaRoja, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 20, 40));
+        add(imgFichaRoja, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 20, 40));
 
         imgTablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Diseño sin título (2).png"))); // NOI18N
         add(imgTablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+public void moverFicha(int colorId, int x, int y)
+{           
+    JLabel lbl = labelJugador(colorId);
+    if(lbl != null)
+    {
+        lbl.setLocation(x, y);
+        lbl.repaint();
+        this.repaint();
+    }
+}
+
+public JLabel labelJugador(int colorId)
+{
+    if (colorId == 0)
+    {
+        return imgFichaRoja;
+    }
+    if (colorId == 1)
+    {
+        return imgFichaAmarillo;
+    }
+    if (colorId == 2)
+    {
+        return imgFichaAzul;
+    }
+    if (colorId == 3)
+    {
+        return imgFichaVerde;
+    }
+        return imgFichaRoja;
+    
+}
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel imgFichaAmarillo;
+    private javax.swing.JLabel imgFichaAzul;
     private javax.swing.JLabel imgFichaRoja;
+    private javax.swing.JLabel imgFichaVerde;
     private javax.swing.JLabel imgTablero;
     // End of variables declaration//GEN-END:variables
 }
