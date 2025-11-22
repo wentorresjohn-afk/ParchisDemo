@@ -4,18 +4,24 @@
  */
 package View;
 
+import Model.Sonidos;
+
 /**
  *
  * @author jhonw
  */
-public class GUIPrincipal extends javax.swing.JFrame {
+public class GUIPrincipal extends javax.swing.JFrame
+{
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIPrincipal.class.getName());
 
+    private Sonidos sonidos = new Sonidos();
+    private Controller.ControladorJuego ctrl;
     /**
      * Creates new form GUIPrincipal
      */
-    public GUIPrincipal() {
+    public GUIPrincipal() 
+    {
         initComponents();
     }
 
@@ -44,58 +50,58 @@ public class GUIPrincipal extends javax.swing.JFrame {
         lblSelección.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         lblSelección.setForeground(new java.awt.Color(255, 255, 255));
         lblSelección.setText("Selección de color");
-        getContentPane().add(lblSelección, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 210, -1));
+        getContentPane().add(lblSelección, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 210, -1));
 
         comboColor.setBackground(new java.awt.Color(0, 51, 102));
         comboColor.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         comboColor.setForeground(new java.awt.Color(255, 255, 255));
         comboColor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Amarillo", "Azul", "Verde" }));
-        getContentPane().add(comboColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
+        getContentPane().add(comboColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
 
-        btnHistoria.setBackground(new java.awt.Color(0, 51, 102));
         btnHistoria.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnHistoria.setForeground(new java.awt.Color(255, 255, 255));
-        btnHistoria.setText("Historia");
+        btnHistoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3.png"))); // NOI18N
+        btnHistoria.setContentAreaFilled(false);
         btnHistoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHistoriaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnHistoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, -1));
+        getContentPane().add(btnHistoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
 
-        btnInstrucciones.setBackground(new java.awt.Color(0, 51, 102));
         btnInstrucciones.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnInstrucciones.setForeground(new java.awt.Color(255, 255, 255));
-        btnInstrucciones.setText("Instrucciones");
+        btnInstrucciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4.png"))); // NOI18N
+        btnInstrucciones.setContentAreaFilled(false);
         btnInstrucciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInstruccionesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, -1, -1));
+        getContentPane().add(btnInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, -1, -1));
 
-        btnCreditos.setBackground(new java.awt.Color(0, 51, 102));
         btnCreditos.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnCreditos.setForeground(new java.awt.Color(255, 255, 255));
-        btnCreditos.setText("Créditos");
+        btnCreditos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2.png"))); // NOI18N
+        btnCreditos.setContentAreaFilled(false);
         btnCreditos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreditosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCreditos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+        getContentPane().add(btnCreditos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, -1, -1));
 
         btnJugar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        btnJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton.png"))); // NOI18N
+        btnJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1.png"))); // NOI18N
         btnJugar.setContentAreaFilled(false);
         btnJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnJugarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 230, 90));
+        getContentPane().add(btnJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 250, 90));
 
-        imgFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/imgInicio_1.png"))); // NOI18N
+        imgFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mediact.png"))); // NOI18N
         getContentPane().add(imgFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -105,24 +111,48 @@ public class GUIPrincipal extends javax.swing.JFrame {
     GUIInstrucciones instru = new GUIInstrucciones();
     instru.setVisible(true);
     instru.setLocationRelativeTo(null);
+//    instru.setVisible(false);
+    
+    sonidos.click();
+    sonidos.detenerFondo();
+    
     }//GEN-LAST:event_btnInstruccionesActionPerformed
 
     private void btnCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditosActionPerformed
     GUICreditos credi = new GUICreditos();
     credi.setVisible(true);
     credi.setLocationRelativeTo(null);
+//    credi.setVisible(false);
+    
+    sonidos.click();
+    sonidos.detenerFondo();
     }//GEN-LAST:event_btnCreditosActionPerformed
 
     private void btnHistoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoriaActionPerformed
     GUIHistoria histo = new GUIHistoria();
     histo.setVisible(true);
     histo.setLocationRelativeTo(null);
+//    histo.setVisible(false);
+    
+    sonidos.click();
+    sonidos.detenerFondo();
     }//GEN-LAST:event_btnHistoriaActionPerformed
 
     private void btnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarActionPerformed
+    
+//    int colorId = comboColor.getSelectedIndex();
+//    ctrl = new Controller.ControladorJuego(colorId);//inicializa el controlador
+        
     GUIJuego juego = new GUIJuego();
     juego.setVisible(true);
     juego.setLocationRelativeTo(null);
+    this.dispose();
+    
+    sonidos.click();
+    sonidos.detenerFondo();
+    
+    
+    
     }//GEN-LAST:event_btnJugarActionPerformed
 
 

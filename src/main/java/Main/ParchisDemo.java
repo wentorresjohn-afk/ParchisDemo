@@ -4,6 +4,7 @@
 
 package Main;
 
+import Model.Sonidos;
 import View.GUIPrincipal;
 
 /**
@@ -17,5 +18,8 @@ public class ParchisDemo
         GUIPrincipal v1 = new GUIPrincipal();
         v1.setVisible(true);
         v1.setLocationRelativeTo(null);
+        
+        Sonidos sonidos = new Sonidos();
+        sonidos.musicaFondo();
     }
 }

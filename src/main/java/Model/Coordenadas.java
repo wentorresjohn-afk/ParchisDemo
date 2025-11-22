@@ -8,23 +8,25 @@ package Model;
  *
  * @author jhonw
  */
-public class Coordenadas 
-{
+public class Coordenadas {
     private int x;
     private int y;
-
-    public Coordenadas(int x, int y) 
-    {
+    
+    //Constructor
+    public Coordenadas(int x, int y) {
         this.x = x;
         this.y = y;
-    }
+    }//fin del constructor
 
+    
+    //Getters
     public int getX() {
         return x;
-    }
+    }//fin del metodo 
 
     public int getY() {
         return y;
-    }
+    }//fin del metodo 
     
-}
+    
+}//fin de la clase 

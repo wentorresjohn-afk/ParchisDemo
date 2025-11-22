@@ -22,8 +22,11 @@
                   <Component id="btnDado" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblNumeroDado" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblFichaTurno" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnReinicio" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPuntosOponentes" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTiempo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPuntosJugador" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnReinicio" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -36,11 +39,17 @@
               <Component id="btnDado" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lblNumeroDado" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="lblFichaTurno" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="57" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtTiempo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="txtPuntosJugador" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtPuntosOponentes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnReinicio" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="jButton3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
           </Group>
@@ -52,6 +61,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Dado"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDadoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnReinicio">
       <Properties>
@@ -74,6 +86,21 @@
     <Component class="javax.swing.JLabel" name="lblFichaTurno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ficha turno"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txtTiempo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tiempo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txtPuntosJugador">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puntos Jugador:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txtPuntosOponentes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Puntos Oponentes"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -8,51 +8,47 @@ package Model;
  *
  * @author jhonw
  */
-public class Colores 
-{//identificadores de los colores
+public class Colores {
+
+    //Id de los colores
     private int rojo = 0;
     private int amarillo = 1;
-    private int azull = 2;
+    private int azul = 2;
     private int verde = 3;
-    
-    //ayuda a mostrar el texto de la etiqueta
-    public String nombre(int id)
-    {
-        switch(id)
-        {
-            case 0: 
+
+    //Metodo para los label fihca turno 
+    public String nombre(int id) {
+        switch (id) {
+            case 0:
                 return "Rojo";
             case 1:
                 return "Amarillo";
-            case 2: 
+            case 2:
                 return "Azul";
-            case 3: 
+            case 3:
                 return "Verde";
             default:
-                return "0";
-        }//fin del case
+                return "Rojo";
+        }//fin del swtich
     }//fin del metodo
     
-    
-    //deduce el id solo por el nombre del color
-    public int idNombre(String nombre)
-    {
-        if (nombre.equals("Rojo"))
-        {
+    //Deduce el id solo por el nombre del color
+    public int idNombre(String nombre) {
+        if (nombre.equals("Rojo")) {
             return 0;
         }
-         if (nombre.equals("Amarillo"))
-        {
+        if (nombre.equals("Amarillo")) {
             return 1;
         }
-         if (nombre.equals("Azul"))
-        {
+        if (nombre.equals("Azul")) {
             return 2;
-        }  
-         if (nombre.equals("Verde"))
-        {
+        }
+        if (nombre.equals("Verde")) {
             return 3;
         }
         return 0;
     }//fin del metodo
-}
+    
+    
+    
+}//fin de la clase

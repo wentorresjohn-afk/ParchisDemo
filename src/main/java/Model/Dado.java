@@ -12,19 +12,31 @@ import java.util.Random;
  */
 public class Dado
 {
+    //Atributos 
     private Random random;
     private int numero;
-
-    public Dado(Random random, int numero) 
-    {
-        this.random = random;
-        this.numero = numero;
-    }
     
-    public int lanzar()
+    //Constructor
+    public Dado()
     {
-        numero = random.nextInt(6) + 1;
+        this.random = new Random();
+        this.numero = 0;
+    }
+
+    public int getNumero() 
+    {
+        return numero;
+    }
+
+    
+    //Metodos
+    public int dadosAleatorios()
+    {
+        numero = random.nextInt(6)+1; //minimo el numero  que lleva el + y el maximo el numero ()
         return numero;
     };
-  
-}
+    
+   
+    
+    
+}//fin del metodo
